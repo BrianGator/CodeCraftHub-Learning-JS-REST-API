@@ -158,7 +158,7 @@ export default function App() {
               </div>
               <button 
                 onClick={() => setIsFormOpen(true)}
-                className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-all shadow-lg shadow-indigo-200 active:scale-95"
+                className="btn-primary flex items-center gap-2"
               >
                 <Plus className="w-4 h-4" />
                 Add Course
@@ -276,7 +276,7 @@ export default function App() {
                         </button>
                         <button 
                           onClick={() => handleDelete(course.id)}
-                          className="p-2 hover:bg-red-50 rounded-xl text-slate-400 hover:text-red-600 transition-colors shadow-xs"
+                          className="btn-delete"
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>
@@ -399,7 +399,7 @@ export default function App() {
                     </button>
                     <button 
                       type="submit"
-                      className="flex-1 px-4 py-3 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200 active:scale-95"
+                      className="flex-1 btn-success"
                     >
                       {editingCourse ? 'Save Changes' : 'Create Course'}
                     </button>

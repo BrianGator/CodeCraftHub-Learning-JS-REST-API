@@ -278,7 +278,8 @@ export default function App() {
                           onClick={() => handleDelete(course.id)}
                           className="btn-delete"
                         >
-                          <Trash2 className="w-4 h-4" />
+                          <Trash2 className="w-3.5 h-3.5" />
+                          Remove
                         </button>
                       </div>
                     </div>

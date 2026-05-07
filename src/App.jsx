@@ -13,37 +13,21 @@ import React, { useState, useEffect } from 'react';
 import { Plus, Trash2, Edit2, CheckCircle2, Circle, Clock, LayoutDashboard, ListTodo, BarChart3, Search, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
-interface Course {
-  id: number;
-  name: string;
-  description: string;
-  target_date: string;
-  status: 'Not Started' | 'In Progress' | 'Completed';
-  created_at: string;
-}
-
-interface Stats {
-  total: number;
-  notStarted: number;
-  inProgress: number;
-  completed: number;
-}
-
 export default function App() {
-  const [courses, setCourses] = useState<Course[]>([]);
-  const [stats, setStats] = useState<Stats>({ total: 0, notStarted: 0, inProgress: 0, completed: 0 });
+  const [courses, setCourses] = useState([]);
+  const [stats, setStats] = useState({ total: 0, notStarted: 0, inProgress: 0, completed: 0 });
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [editingCourse, setEditingCourse] = useState<Course | null>(null);
+  const [editingCourse, setEditingCourse] = useState(null);
 
   // Form states
   const [formData, setFormData] = useState({
     name: '',
     description: '',
     target_date: '',
-    status: 'Not Started' as const
+    status: 'Not Started'
   });
 
   const fetchCourses = async () => {
@@ -79,7 +63,7 @@ export default function App() {
     init();
   }, []);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const url = editingCourse ? `/api/courses/${editingCourse.id}` : '/api/courses';
@@ -104,7 +88,7 @@ export default function App() {
     }
   };
 
-  const handleDelete = async (id: number) => {
+  const handleDelete = async (id) => {
     if (!confirm('Are you sure you want to delete this course?')) return;
     try {
       const response = await fetch(`/api/courses/${id}`, { method: 'DELETE' });
@@ -118,7 +102,7 @@ export default function App() {
     }
   };
 
-  const handleEdit = (course: Course) => {
+  const handleEdit = (course) => {
     setEditingCourse(course);
     setFormData({
       name: course.name,
@@ -141,7 +125,7 @@ export default function App() {
     c.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status) => {
     switch (status) {
       case 'Completed': return <CheckCircle2 className="w-5 h-5 text-green-500" />;
       case 'In Progress': return <Clock className="w-5 h-5 text-amber-500" />;
@@ -389,7 +373,7 @@ export default function App() {
                       <select 
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 appearance-none bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
                         value={formData.status}
-                        onChange={(e) => setFormData({...formData, status: e.target.value as any})}
+                        onChange={(e) => setFormData({...formData, status: e.target.value})}
                       >
                         <option value="Not Started">Not Started</option>
                         <option value="In Progress">In Progress</option>
@@ -434,4 +418,3 @@ export default function App() {
     </div>
   );
 }
-

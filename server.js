@@ -17,15 +17,6 @@ const __dirname = path.dirname(__filename);
 const DATA_FILE = path.join(__dirname, 'courses.json');
 const PORT = 3000;
 
-interface Course {
-  id: number;
-  name: string;
-  description: string;
-  target_date: string;
-  status: 'Not Started' | 'In Progress' | 'Completed';
-  created_at: string;
-}
-
 async function startServer() {
   const app = express();
 
@@ -34,7 +25,7 @@ async function startServer() {
   app.use(express.json());
 
   // Helper functions
-  const loadCourses = async (): Promise<Course[]> => {
+  const loadCourses = async () => {
     try {
       if (!await fs.pathExists(DATA_FILE)) {
         await fs.writeJson(DATA_FILE, [], { spaces: 2 });
@@ -47,7 +38,7 @@ async function startServer() {
     }
   };
 
-  const saveCourses = async (courses: Course[]): Promise<boolean> => {
+  const saveCourses = async (courses) => {
     try {
       await fs.writeJson(DATA_FILE, courses, { spaces: 2 });
       return true;
@@ -57,7 +48,7 @@ async function startServer() {
     }
   };
 
-  const getNextId = (courses: Course[]): number => {
+  const getNextId = (courses) => {
     if (courses.length === 0) return 1;
     return Math.max(...courses.map(c => c.id)) + 1;
   };
@@ -73,7 +64,7 @@ async function startServer() {
         count: courses.length,
         courses: courses
       });
-    } catch (error: any) {
+    } catch (error) {
       res.status(500).json({
         success: false,
         error: `Failed to retrieve courses: ${error.message}`
@@ -95,7 +86,7 @@ async function startServer() {
         success: true,
         stats
       });
-    } catch (error: any) {
+    } catch (error) {
       res.status(500).json({
         success: false,
         error: `Failed to retrieve stats: ${error.message}`
@@ -121,7 +112,7 @@ async function startServer() {
           error: `Course with ID ${courseId} not found`
         });
       }
-    } catch (error: any) {
+    } catch (error) {
       res.status(500).json({
         success: false,
         error: `Failed to retrieve course: ${error.message}`
@@ -161,7 +152,7 @@ async function startServer() {
       
       const courses = await loadCourses();
       
-      const newCourse: Course = {
+      const newCourse = {
         id: getNextId(courses),
         name: data.name,
         description: data.description,
@@ -184,7 +175,7 @@ async function startServer() {
           error: 'Failed to save course'
         });
       }
-    } catch (error: any) {
+    } catch (error) {
       res.status(500).json({
         success: false,
         error: `Failed to add course: ${error.message}`
@@ -245,7 +236,7 @@ async function startServer() {
           error: 'Failed to save changes'
         });
       }
-    } catch (error: any) {
+    } catch (error) {
       res.status(500).json({
         success: false,
         error: `Failed to update course: ${error.message}`
@@ -281,7 +272,7 @@ async function startServer() {
           error: 'Failed to save changes'
         });
       }
-    } catch (error: any) {
+    } catch (error) {
       res.status(500).json({
         success: false,
         error: `Failed to delete course: ${error.message}`

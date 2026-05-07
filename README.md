@@ -15,10 +15,10 @@ CodeCraftHub is a sophisticated, full-stack personalized learning platform desig
 ## Project Structure
 ```text
 codecrafthub/
-├── server.ts            # Full-stack entry point (Express + Vite)
+├── server.js            # Full-stack entry point (Express + Vite)
 ├── src/
-│   ├── App.tsx          # React Dashboard UI
-│   └── main.tsx         # Frontend entry
+│   ├── App.jsx          # React Dashboard UI
+│   └── main.jsx         # Frontend entry
 ├── courses.json         # Storage (auto-created)
 ├── dev-requirements.txt # Technical documentation
 ├── [Test Directories]/  # Comprehensive test suites (Selenium, Playwright, etc.)

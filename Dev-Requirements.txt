@@ -11,9 +11,9 @@ Date: 2026-05-07
 6. Responsive design for mobile and desktop access.
 
 ### File Descriptions & Technologies
-- server.ts: Backend entry point. Uses Node.js, Express, and Vite Middleware. Handles API requests and JSON file IO.
-- src/App.tsx: Main Frontend component. Built with React 19, Tailwind CSS, Lucide icons, and Framer Motion for animations.
-- src/main.tsx: Client-side entry point for React mounting.
+- server.js: Backend entry point. Uses Node.js, Express, and Vite Middleware. Handles API requests and JSON file IO.
+- src/App.jsx: Main Frontend component. Built with React 19, Tailwind CSS, Lucide icons, and Framer Motion for animations.
+- src/main.jsx: Client-side entry point for React mounting.
 - courses.json: Data storage file in JSON format (auto-generated).
 - Selenium-Tests/: Browser automation tests using C# and Selenium WebDriver.
 - Playwright-Tests/: Modern web testing using C# and Microsoft Playwright.
@@ -26,7 +26,7 @@ Date: 2026-05-07
 - README.md: Comprehensive project documentation.
 
 ### Core Technologies
-- Language: TypeScript
+- Language: JavaScript
 - Backend: Express v4
 - Frontend: React v19
 - Styling: Tailwind CSS v4

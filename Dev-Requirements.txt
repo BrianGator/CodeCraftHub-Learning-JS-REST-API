@@ -32,4 +32,4 @@ Date: 2026-05-07
 - Styling: Tailwind CSS v4
 - Animations: Motion (Framer Motion)
 - Icons: Lucide React
-- Dev Runner: tsx, vite
+- Dev Runner: node, vite

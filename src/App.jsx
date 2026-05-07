@@ -10,7 +10,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { Plus, Trash2, Edit2, CheckCircle2, Circle, Clock, LayoutDashboard, ListTodo, BarChart3, Search, AlertCircle } from 'lucide-react';
+import { Plus, Edit2, CheckCircle2, Circle, Clock, LayoutDashboard, ListTodo, BarChart3, Search, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function App() {
@@ -274,7 +274,7 @@ export default function App() {
                         >
                           <Edit2 className="w-4 h-4" />
                         </button>
-                        <button onClick={() => handleDelete(course.id)} className="btn-delete">Remove</button>
+                        <button className="btn-delete" onClick={() => handleDelete(course.id)}>Remove</button>
                       </div>
                     </div>
                     <p className="text-sm text-slate-600 leading-relaxed line-clamp-2 mb-6 h-10 font-medium">

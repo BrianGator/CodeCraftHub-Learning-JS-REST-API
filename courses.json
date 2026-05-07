@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "name": "IBM Data Science Professional Certificate",
+    "description": "Learn the most in-demand skills for Data Science and Machine Learning from IBM experts.",
+    "target_date": "2026-06-01",
+    "status": "Completed",
+    "created_at": "2026-05-07 10:00:00"
+  },
+  {
+    "id": 2,
+    "name": "Microsoft Azure Fundamentals (AZ-900)",
+    "description": "Foundational knowledge of cloud services and how those services are provided with Microsoft Azure.",
+    "target_date": "2026-06-15",
+    "status": "Completed",
+    "created_at": "2026-05-07 10:05:00"
+  },
+  {
+    "id": 3,
+    "name": "Python for Everybody Specialization",
+    "description": "Learn to Program and Analyze Data with Python. Develop programs to clean, analyze and visualize data.",
+    "target_date": "2026-07-01",
+    "status": "Completed",
+    "created_at": "2026-05-07 10:10:00"
+  },
+  {
+    "id": 4,
+    "name": "Java Programming: Solving Problems with Software",
+    "description": "Learn to code in Java and improve your programming and problem-solving skills.",
+    "target_date": "2026-07-20",
+    "status": "Completed",
+    "created_at": "2026-05-07 10:15:00"
+  },
+  {
+    "id": 5,
+    "name": "IBM Full Stack Software Developer Certificate",
+    "description": "Master the clouds, front-end, back-end, and everything in between for modern web apps.",
+    "target_date": "2026-08-30",
+    "status": "In Progress",
+    "created_at": "2026-05-07 10:20:00"
+  },
+  {
+    "id": 6,
+    "name": "Microsoft Cybersecurity Analyst Professional Certificate",
+    "description": "Prepare for a career in cybersecurity. Learn to identify vulnerabilities and secure systems.",
+    "target_date": "2026-09-12",
+    "status": "In Progress",
+    "created_at": "2026-05-07 10:25:00"
+  },
+  {
+    "id": 7,
+    "name": "Meta Front-End Developer (JavaScript focus)",
+    "description": "Launch your career as a front-end developer. Build a portfolio using React and JavaScript.",
+    "target_date": "2026-10-05",
+    "status": "Not Started",
+    "created_at": "2026-05-07 10:30:00"
+  },
+  {
+    "id": 8,
+    "name": "C# Programming for Unity Game Development",
+    "description": "Learn the C# programming language and the Unity game engine to build your own 2D and 3D games.",
+    "target_date": "2026-11-22",
+    "status": "Not Started",
+    "created_at": "2026-05-07 10:35:00"
+  },
+  {
+    "id": 9,
+    "name": "AI Product Manager Specialization",
+    "description": "Master the AI product development lifecycle and learn how to manage AI-driven products successfully.",
+    "target_date": "2026-12-01",
+    "status": "Not Started",
+    "created_at": "2026-05-07 19:15:00"
+  },
+  {
+    "id": 10,
+    "name": "Google Project Management Professional Certificate",
+    "description": "Gain a deep understanding of project management practices and theories to prepare for entry-level roles.",
+    "target_date": "2026-12-15",
+    "status": "Not Started",
+    "created_at": "2026-05-07 19:15:00"
+  },
+  {
+    "id": 11,
+    "name": "Full Stack Web Development with React Specialization",
+    "description": "Build complete web applications from front to back using React, Node.js, and MongoDB.",
+    "target_date": "2027-01-10",
+    "status": "Not Started",
+    "created_at": "2026-05-07 19:15:00"
+  },
+  {
+    "id": 12,
+    "name": "Applied Data Science with Python Specialization",
+    "description": "Learn techniques like machine learning, information visualization, and text analysis using Python.",
+    "target_date": "2027-02-15",
+    "status": "Not Started",
+    "created_at": "2026-05-07 19:15:00"
+  },
+  {
+    "id": 13,
+    "name": "SQL for Data Science",
+    "description": "Learn how to use SQL to query and analyze data, essential for any data role.",
+    "target_date": "2026-08-15",
+    "status": "In Progress",
+    "created_at": "2026-05-07 19:15:00"
+  },
+  {
+    "id": 14,
+    "name": "Selenium WebDriver with Java - Basics to Advanced",
+    "description": "Learn automated web testing using Selenium WebDriver and the Java programming language.",
+    "target_date": "2026-12-31",
+    "status": "Not Started",
+    "created_at": "2026-05-07 19:15:00"
+  },
+  {
+    "id": 15,
+    "name": "End-to-End Test Automation with Cypress",
+    "description": "Master Cypress for modern web application testing and build fast, reliable end-to-end tests.",
+    "target_date": "2027-03-01",
+    "status": "Not Started",
+    "created_at": "2026-05-07 19:15:00"
+  },
+  {
+    "id": 16,
+    "name": "Behavior Driven Development with Cucumber",
+    "description": "Learn how to write BDD tests using Cucumber and Gherkin syntax to bridge the gap between business and tech.",
+    "target_date": "2027-04-15",
+    "status": "Not Started",
+    "created_at": "2026-05-07 19:15:00"
+  },
+  {
+    "id": 17,
+    "name": "Playwright: Web Automation Testing",
+    "description": "Explore the power of Playwright for cross-browser, cross-platform web testing automation.",
+    "target_date": "2027-05-20",
+    "status": "Not Started",
+    "created_at": "2026-05-07 19:15:00"
+  }
+]

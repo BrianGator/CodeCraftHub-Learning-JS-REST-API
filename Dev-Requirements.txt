@@ -1,0 +1,35 @@
+Project Name: CodeCraftHub
+Project Owner: Brian McCarthy
+Date: 2026-05-07
+
+### Project Requirements
+1. Full-stack application with Node.js/Express backend and React frontend.
+2. CRUD operations for educational course management.
+3. Persistent storage using JSON file system (courses.json).
+4. Interactive Dashboard with real-time statistics and filtering.
+5. Comprehensive test suite spanning 12 different testing methodologies.
+6. Responsive design for mobile and desktop access.
+
+### File Descriptions & Technologies
+- server.ts: Backend entry point. Uses Node.js, Express, and Vite Middleware. Handles API requests and JSON file IO.
+- src/App.tsx: Main Frontend component. Built with React 19, Tailwind CSS, Lucide icons, and Framer Motion for animations.
+- src/main.tsx: Client-side entry point for React mounting.
+- courses.json: Data storage file in JSON format (auto-generated).
+- Selenium-Tests/: Browser automation tests using C# and Selenium WebDriver.
+- Playwright-Tests/: Modern web testing using C# and Microsoft Playwright.
+- Cypress-Tests/: Frontend integration and end-to-end testing with Cypress.
+- Cucumber-Tests/: Behavior-driven development (BDD) tests with Gherkin syntax.
+- Load/Stress/Performance-Tests/: Backend durability and frontend speed validation.
+- Unit/System/Integration-Tests/: Core logic and environment validation.
+- Security-Tests/: Protection against common web vulnerabilities (XSS, Injection).
+- End-to-End-Tests/: Full user journey validation.
+- README.md: Comprehensive project documentation.
+
+### Core Technologies
+- Language: TypeScript
+- Backend: Express v4
+- Frontend: React v19
+- Styling: Tailwind CSS v4
+- Animations: Motion (Framer Motion)
+- Icons: Lucide React
+- Dev Runner: tsx, vite
